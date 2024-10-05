@@ -1,9 +1,10 @@
 import React from "react";
+import { holdings } from "../data/data";
 
 const Holdings = () => {
   return (
     <>
-      <h3 className="title">Holdings (13)</h3>
+      <h3 className="title">Holdings ({holdings.length})</h3>
 
       <div className="order-table">
         <table>
@@ -17,6 +18,27 @@ const Holdings = () => {
             <th>Net chg.</th>
             <th>Day chg.</th>
           </tr>
+          {holdings.map((holding, index) => {
+            const currentValue = holding.qty * holding.price;
+            const avgCost = holding.price * holding.qty;
+            const isProfit = currentValue - holding.avg * holding.qty >= 0;
+            const profitClass = isProfit ? "profit" : "loss";
+            console.log(profitClass)
+            return (
+              <tr>
+                <td>{holding.name}</td>
+                <td>{holding.qty}</td>
+                <td>{avgCost}</td>
+                <td>{holding.price}</td>
+                <td>{currentValue}</td>
+                <td className={profitClass}>
+                  {(currentValue - holding.avg * holding.qty).toFixed(2)}
+                </td>
+                <td className={profitClass}>{holding.net}</td>
+                <td className={profitClass}>{holding.day}</td>
+              </tr>
+            );
+          })}
         </table>
       </div>
 

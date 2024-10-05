@@ -187,9 +187,9 @@ code {
   border-right: 1px solid #f1f1f1;
 }
 
-.order-table tr td:last-child {
+/* .order-table tr td:last-child {
   font-size: 0.6rem;
-}
+} */
 
 .order-table td {
   padding: 10px 10px;
@@ -415,9 +415,7 @@ hr {
     border-radius: 2px;
 }
 
-.order-table tr td:last-child {
-  font-size: 0.6rem;
-}
+
 
 .order-table td {
   padding: 10px 10px;
