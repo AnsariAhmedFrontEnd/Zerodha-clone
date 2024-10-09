@@ -28,7 +28,7 @@ const WatchListItem = ({ stock }) => {
           <span className="price">{stock.price}</span>
         </div>
       </div>
-      {showWatchlistAction && <WatchListActions uid={stock.name} />}
+      {showWatchlistAction && <WatchListActions uid={stock.name} marketPrice={stock.price} />}
     </li>
   );
 };
