@@ -31,7 +31,7 @@ const signup = async (req, res, next) => {
 
     res.status(200).json({
       success: true,
-      message: "User signed in successfully",
+      message: "User signed up successfully",
       user,
     });
 
@@ -49,7 +49,6 @@ const login = async (req, res, next) => {
     }
 
     const user = await UserModel.findOne({ email });
-
 
     if (!user) {
       return res.json({ message: "Incorrect password or email" });
@@ -77,4 +76,9 @@ const login = async (req, res, next) => {
   }
 };
 
-module.exports = { signup, login };
+const logout = (req, res) => {
+  res.clearCookie("token");
+  res.status(200).json({ message: "Logged out successfully", success: true });
+};
+
+module.exports = { signup, login, logout };

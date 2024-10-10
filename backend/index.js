@@ -77,4 +77,49 @@ app.post("/neworder", (req, res) => {
   }
 });
 
+//Get all orders
+app.get("/allorders", async (req, res) => {
+  try {
+    const allOrders = await OrdersModel.find({});
+    res.json(allOrders);
+  } catch (error) {
+    res.status(500).json({ message: "Failed to fetch holdings", error });
+  }
+});
+
+//Exit order
+app.delete("/exitorder/:orderId", async (req, res) => {
+  const { orderId } = req.params;
+  try {
+    const exitOrder = await OrdersModel.findByIdAndDelete(orderId);
+    if (!exitOrder) {
+      return res.status(404).json({ message: "Order not found", success: false });
+    }
+    console.log(exitOrder)
+    res
+      .status(200)
+      .json({ message: "Order exited successfully", success: true });
+  } catch (error) {
+    res.status(500).json({ message: "Failed to exit order", error });
+  }
+});
+
+//Sell Holding
+app.delete("/sellorder/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const sellOrder = await HoldingsModel.findByIdAndDelete(id);
+    if (!sellOrder) {
+      return res.status(404).json({ message: "Order not found", success: false });
+    }
+    console.log(sellOrder)
+    res
+      .status(200)
+      .json({ message: "Order exited successfully", success: true });
+  } catch (error) {
+    res.status(500).json({ message: "Failed to exit order", error });
+  }
+});
+
+
 app.use("/", authRoute);

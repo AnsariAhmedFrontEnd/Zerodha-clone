@@ -15,7 +15,9 @@ const userVerication = (req, res) => {
     if (err) {
       return res.json({ status: false });
     } else {
-      const user = await UserModel.findById(data._id);
+      console.log(data)
+      const user = await UserModel.findById(data.id);
+      console.log(user)
       if (user) {
         return res.json({ status: true, user });
       } else {
