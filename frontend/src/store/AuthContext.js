@@ -4,7 +4,6 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-
 // Create the context
 const AuthContext = createContext();
 
@@ -60,7 +59,8 @@ export const AuthProvider = ({ children }) => {
       );
       if (response.data.success) {
         console.log(response.data.user);
-        toast.success(response.data.message)
+        console.log(response.data.message);
+        toast.success(response.data.message);
         setIsAuthenticated(true);
         setUser(response.data.user);
         await checkAuthStatus(); // Call checkAuthStatus explicitly to sync state
@@ -75,11 +75,12 @@ export const AuthProvider = ({ children }) => {
   // Function to log out the user
   const logout = async () => {
     try {
-      await axios.post(
+      const response = await axios.post(
         "http://localhost:5000/logout",
         {},
         { withCredentials: true }
       );
+      toast.success(response.data.message);
       setIsAuthenticated(false);
       setUser(null);
     } catch (error) {

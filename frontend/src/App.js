@@ -5,10 +5,13 @@ import AuthCheck from "./AuthCheck";
 import LandingPage from "./LandingPage";
 import { AuthProvider } from "./store/AuthContext";
 import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const App = () => {
   return (
+    <>
     <AuthProvider>
       <Routes>
         <Route path="/*" element={<LandingPage />} />
@@ -21,8 +24,10 @@ const App = () => {
           }
         />
       </Routes>
-      <ToastContainer />
+      
     </AuthProvider>
+    <ToastContainer />
+    </>
 
   );
 };
