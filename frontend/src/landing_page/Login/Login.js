@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../store/AuthContext";
-import { toast } from "react-toastify";
 
 
 const Login = () => {

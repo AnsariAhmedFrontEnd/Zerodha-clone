@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import LinkButton from "../LinkButton";
 
 const Footer = () => {
   return (
@@ -36,35 +37,35 @@ const Footer = () => {
         <div className="col-3">
           <h4 className="mb-4">Compnay</h4>
           <div className="links">
-            <a href="">About</a>
-            <a href="">Products</a>
-            <a href="">Pricing</a>
-            <a href="">Refrral programme</a>
-            <a href="">Careers</a>
-            <a href="">Zerodha.tech</a>
-            <a href="">Press & media</a>
-            <a href="">Zerodha Cares</a>
+            <LinkButton>About</LinkButton>
+            <LinkButton>Products</LinkButton>
+            <LinkButton>Pricing</LinkButton>
+            <LinkButton>Refrral programme</LinkButton>
+            <LinkButton>Careers</LinkButton>
+            <LinkButton>Zerodha.tech</LinkButton>
+            <LinkButton>Press & media</LinkButton>
+            <LinkButton>Zerodha Cares</LinkButton>
           </div>
         </div>
         <div className="col-3">
           <h4 className="mb-4">Support</h4>
           <div className="links">
-            <a href="">Contact us</a>
-            <a href="">Support portal</a>
-            <a href="">Z-Connect blog</a>
-            <a href="">List of charges</a>
-            <a href="">Download and Resources</a>
-            <a href="">Videos</a>
-            <a href="">Market overview</a>
-            <a href="">How to file a complaint?</a>
-            <a href="">Status of your complaints</a>
+            <LinkButton>Contact us</LinkButton>
+            <LinkButton>Support portal</LinkButton>
+            <LinkButton>Z-Connect blog</LinkButton>
+            <LinkButton>List of charges</LinkButton>
+            <LinkButton>Download and Resources</LinkButton>
+            <LinkButton>Videos</LinkButton>
+            <LinkButton>Market overview</LinkButton>
+            <LinkButton>How to file a complaint?</LinkButton>
+            <LinkButton>Status of your complaints</LinkButton>
           </div>
         </div>
         <div className="col-3">
           <h4 className="mb-4">Account</h4>
           <div className="links">
-            <a href="">Open and account</a>
-            <a href="">Fund transer</a>
+            <LinkButton>Open and account</LinkButton>
+            <LinkButton>Fund transer</LinkButton>
           </div>
         </div>
       </div>

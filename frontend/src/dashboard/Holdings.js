@@ -7,7 +7,6 @@ const Holdings = () => {
   const fetchAllHoldings = async () => {
     try {
       const response = await axios.get("https://zerodha-clone-1x1d.onrender.com/allholdings");
-      console.log(response.data);
 
       setAllHoldings(response.data);
     } catch (error) {
@@ -21,7 +20,7 @@ const Holdings = () => {
 
   const sellOrder = async (id) => {
     try {
-      const response = await axios.delete(`https://zerodha-clone-1x1d.onrender.com/sellorder/${id}`);
+      await axios.delete(`https://zerodha-clone-1x1d.onrender.com/sellorder/${id}`);
       fetchAllHoldings();
     } catch (error) {}
   };

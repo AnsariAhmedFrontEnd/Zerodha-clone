@@ -1,4 +1,5 @@
 import React from "react";
+import LinkButton from "../../LinkButton";
 
 const Hero = () => {
   return (
@@ -8,9 +9,7 @@ const Hero = () => {
         <h5 className="mb-4">Sleek, modern, and intuitive trading platforms</h5>
         <p className="text-muted mb-5">
           Check out our{" "}
-          <a href="" style={{textDecoration:"none"}}>
-            investment offerings <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          <LinkButton>investment offerings</LinkButton>
         </p>
       </div>
     </div>

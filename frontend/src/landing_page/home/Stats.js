@@ -1,4 +1,5 @@
 import React from "react";
+import LinkButton from "../../LinkButton";
 
 const Stats = () => {
   return (
@@ -36,13 +37,14 @@ const Stats = () => {
             style={{ width: "90%", height: "90%" }}
           />
           <div className="mt-4 fs-5 mx-4 ">
-            <a href="/" className="ms-5" style={{ textDecoration: "none" }}>
-              Explore our products <i className="fa-solid fa-arrow-right-long"></i>
-            </a>
+            <LinkButton>
+              Explore our products{" "}
+              <i className="fa-solid fa-arrow-right-long"></i>
+            </LinkButton>
 
-            <a href="/" className="ms-5" style={{ textDecoration: "none" }}>
+            <LinkButton>
               Try Kite demo <i className="fa-solid fa-arrow-right-long"></i>
-            </a>
+            </LinkButton>
           </div>
         </div>
       </div>

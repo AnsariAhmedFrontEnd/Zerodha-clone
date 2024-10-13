@@ -1,4 +1,5 @@
 import React from "react";
+import LinkButton from "../../LinkButton";
 
 const Pricing = () => {
   return (
@@ -10,9 +11,9 @@ const Pricing = () => {
             We pioneered the concept of discount broking and price transparency
             in India. Flat fees and no hidden charges.
           </p>
-          <a href="/" className="fs-5" style={{ textDecoration: "none" }}>
+          <LinkButton>
             See pricing <i className="fa-solid fa-arrow-right-long"></i>
-          </a>
+          </LinkButton>
         </div>
         <div className="col-2"></div>
         <div className="col-6">
