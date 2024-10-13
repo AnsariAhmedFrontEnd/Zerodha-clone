@@ -63,24 +63,6 @@ code {
   background: #4184f3;
 }
 
-.row {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-top: 5%;
-}
-
-.col {
-  flex-basis: 48%;
-  text-align: left;
-}
-
-.col span {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2%;
-}
 
 .section-icon {
   transform: scale(0.8);
@@ -90,11 +72,6 @@ code {
   margin-right: 10px;
 }
 
-.col span p {
-  display: inline-block;
-  font-size: 1.2rem;
-  font-weight: 300;
-}
 
 .table {
   border: 1px solid #ddd;
@@ -215,38 +192,8 @@ code {
   color: rgb(250, 118, 78);
 }
 
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 5%;
-}
 
-.col {
-  flex-basis: 33%;
-}
 
-.col h5 {
-  font-size: 1.8rem;
-  color: rgb(71, 71, 71);
-  font-weight: 300;
-}
-
-.col h5 span {
-  font-weight: 300;
-  font-size: 0.9rem;
-}
-
-.col p {
-  font-size: 0.8rem;
-  color: rgb(153, 153, 153);
-  font-weight: 300;
-  margin-top: 2%;
-}
-
-.row .col:last-child h5 {
-  color: rgb(72, 194, 55);
-}
 
 /* sudo selector */
 .item:hover {
@@ -368,18 +315,6 @@ hr {
   font-weight: 300;
 }
 
-.btn {
-  text-decoration: none;
-  background: rgb(77, 77, 248);
-  padding: 10px 20px;
-  border-radius: 2px;
-  color: #fff;
-  margin-top: 2%;
-}
-
-.btn:hover {
-  background: rgb(110, 110, 253);
-}
 
 .title {
   font-size: 1.3rem;
@@ -439,38 +374,17 @@ hr {
   color: rgb(250, 118, 78);
 }
 
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 5%;
-}
 
-.col {
-  flex-basis: 33%;
-}
 
-.col h5 {
-  font-size: 1.8rem;
-  color: rgb(71, 71, 71);
-  font-weight: 300;
-}
 
-.col h5 span {
-  font-weight: 300;
-  font-size: 0.9rem;
-}
 
-.col p {
-  font-size: 0.8rem;
-  color: rgb(153, 153, 153);
-  font-weight: 300;
-  margin-top: 2%;
-}
 
-.row .col:last-child h5 {
-  color: rgb(72, 194, 55);
-}
+
+
+
+
+
+
 
 /* sudo selector */
 .item:hover {
@@ -840,4 +754,17 @@ hr {
 
 .action:hover {
   background-color: rgb(212, 212, 212);
+}
+
+
+.product-page-link {
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-align: start;
+  text-wrap: nowrap;
 }

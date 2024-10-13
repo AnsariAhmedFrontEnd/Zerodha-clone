@@ -4,9 +4,7 @@ import LinkButton from "../LinkButton";
 
 const Footer = () => {
   return (
-    <footer
-      className="container-fluid border-top bg-light px-5"
-    >
+    <footer className="container-fluid border-top bg-light px-5">
       <div className="row mt-5 px-5">
         <div className="col-3">
           <img
@@ -69,7 +67,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="row px-5 mb-5">
+      <div className="row px-5">
         <p className="footer-para mt-4">
           Zerodha Broking Ltd.: Member of NSE, BSE​ &​ MCX – SEBI Registration
           no.: INZ000031633 CDSL/NSDL: Depository services through Zerodha
@@ -112,7 +110,7 @@ const Footer = () => {
           Check your securities / MF / bonds in the consolidated account
           statement issued by NSDL/CDSL every month.
         </p>
-        <p className="footer-para">
+        <p className="footer-para mb-5">
           "Prevent unauthorised transactions in your account. Update your mobile
           numbers/email IDs with your stock brokers. Receive information of your
           transactions directly from Exchange on your mobile/email at the end of

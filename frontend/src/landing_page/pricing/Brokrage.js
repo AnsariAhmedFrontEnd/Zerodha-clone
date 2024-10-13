@@ -38,7 +38,7 @@ const Brokrage = () => {
             <p>Flat Rs. 20 per executed order</p>
           </div>
         </div>
-        <div className="row text-muted bg-light py-1">
+        <div className="row text-muted py-1">
           <div className="col d-flex align-items-center">
             <p>STT/CTT </p>
           </div>
@@ -82,7 +82,7 @@ const Brokrage = () => {
             <p>BSE: 0.0325% (on premium)</p>
           </div>
         </div>
-        <div className="row text-muted bg-light py-1">
+        <div className="row text-muted py-1">
           <div className="col">
             <p>GST</p>
           </div>

@@ -18,7 +18,7 @@ const Pricing = () => {
         <div className="col-2"></div>
         <div className="col-6">
           <div className="row text-center">
-            <div className="col-4 border p-3">
+            <div className="col-4 border p-3 h-4">
               <h2>₹0</h2>
               <p> Free account opening</p>
             </div>

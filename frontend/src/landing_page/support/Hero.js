@@ -1,5 +1,4 @@
 import React from "react";
-import LinkButton from "../../LinkButton";
 
 const Hero = () => {
   return (
@@ -10,7 +9,7 @@ const Hero = () => {
     >
       <div className="d-flex flex-row justify-content-between mx-5 px-5 py-5">
         <h4>Support Portal</h4>
-        <LinkButton>Track tickets</LinkButton>
+        <button className="product-page-link">Track tickets</button>
       </div>
 
       <div className="row mx-5 px-5">
@@ -28,10 +27,10 @@ const Hero = () => {
             />
           </div>
           <div className="d-flex flex-wrap gap-4 mt-3">
-            <LinkButton>Track account opening</LinkButton>
-            <LinkButton>Track segment activation</LinkButton>
-            <LinkButton>Intraday margins</LinkButton>
-            <LinkButton>Kite user manual</LinkButton>
+            <button className="product-page-link">Track account opening</button>
+            <button className="product-page-link">Track segment activation</button>
+            <button className="product-page-link">Intraday margins</button>
+            <button className="product-page-link">Kite user manual</button>
           </div>
         </div>
         <div className="col-1"></div>
@@ -39,14 +38,14 @@ const Hero = () => {
           <h2 className="fs-4">Featured</h2>
           <ol className="mt-3">
             <li className="mb-3">
-              <LinkButton>
+              <button className="product-page-link">
                 Surveillance measure on scrips - September 2024
-              </LinkButton>
+              </button>
             </li>
             <li>
-              <LinkButton>
+              <button className="product-page-link">
                 Rights Entitlements listing in September 2024
-              </LinkButton>
+              </button>
             </li>
           </ol>
         </div>
