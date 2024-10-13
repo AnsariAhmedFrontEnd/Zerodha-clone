@@ -26,8 +26,11 @@ const signup = async (req, res, next) => {
     const token = createSecretToken(user._id);
     res.cookie("token", token, {
       withCredentials: true,
-      httpOnly: false,
+      httpOnly: true,
+      secure: false,
+      sameSite: "Lax"
     });
+    
 
     res.status(200).json({
       success: true,
@@ -64,7 +67,9 @@ const login = async (req, res, next) => {
 
     res.cookie("token", token, {
       withCredentials: true,
-      httpOnly: false,
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production", // Use true only in production
+      sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax", // Use 'None' in production, 'Lax' in development
     });
 
     res

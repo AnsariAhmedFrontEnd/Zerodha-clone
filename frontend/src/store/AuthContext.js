@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
   const checkAuthStatus = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/",
+        "https://zerodha-clone-1x1d.onrender.com/",
         {},
         { withCredentials: true }
       );
@@ -51,7 +51,7 @@ export const AuthProvider = ({ children }) => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:5000/login",
+        "https://zerodha-clone-1x1d.onrender.com/login",
         credentials,
         {
           withCredentials: true,
@@ -59,7 +59,6 @@ export const AuthProvider = ({ children }) => {
       );
       if (response.data.success) {
         console.log(response.data.user);
-        console.log(response.data.message);
         toast.success(response.data.message);
         setIsAuthenticated(true);
         setUser(response.data.user);
@@ -76,7 +75,7 @@ export const AuthProvider = ({ children }) => {
   const logout = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/logout",
+        "https://zerodha-clone-1x1d.onrender.com/logout",
         {},
         { withCredentials: true }
       );

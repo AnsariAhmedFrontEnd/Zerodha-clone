@@ -6,7 +6,7 @@ const Orders = () => {
 
   const fetchAllOrders = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/allorders");
+      const response = await axios.get("https://zerodha-clone-1x1d.onrender.com/allorders");
       setAllOrders(response.data);
     } catch (error) {
       console.log(error);
@@ -19,7 +19,7 @@ const Orders = () => {
 
   const exitOrder = async(orderId) => {
 try {
-  const response = await axios.delete(`http://localhost:5000/exitorder/${orderId}`)
+  const response = await axios.delete(`https://zerodha-clone-1x1d.onrender.com/exitorder/${orderId}`)
   fetchAllOrders()
   console.log(response)
 } catch (error) {

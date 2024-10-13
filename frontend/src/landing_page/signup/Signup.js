@@ -20,7 +20,7 @@ const Signup = () => {
         const newUser = { name, email, password };
 
         const response = await axios.post(
-          "http://localhost:5000/signup",
+          "https://zerodha-clone-1x1d.onrender.com/signup",
           newUser,
           {
             withCredentials: true,

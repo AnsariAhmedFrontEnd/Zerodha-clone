@@ -26,7 +26,7 @@ const WatchListActions = ({ uid, marketPrice }) => {
     const newOrder = { name: uid, qty: qty, price: price, mode: "BUY" };
     try {
       const response = await axios.post(
-        "http://localhost:5000/neworder",
+        "https://zerodha-clone-1x1d.onrender.com/neworder",
         newOrder,
         {
           headers: {

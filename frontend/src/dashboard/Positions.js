@@ -6,7 +6,7 @@ const Positions = () => {
 
   const fetchAllPositions = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/allpositions");
+      const response = await axios.get("https://zerodha-clone-1x1d.onrender.com/allpositions");
       setAllPositions(response.data);
     } catch (error) {
       console.log(error);
