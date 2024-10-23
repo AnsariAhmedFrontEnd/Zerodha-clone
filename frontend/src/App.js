@@ -6,6 +6,7 @@ import LandingPage from "./LandingPage";
 import { AuthProvider } from "./store/AuthContext";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { useAuth } from "./store/AuthContext";
 
 
 
