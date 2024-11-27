@@ -14,8 +14,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://mern-zerodha.netlify.app"],
+    origin: ["http://localhost:3000", "https://mern-zerodha.netlify.app"],
     credentials: true,
+    methods: ["GET", "POST", "DELETE", "PUT", "PATCH"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 app.use(bodyParse.json());
@@ -91,9 +93,11 @@ app.delete("/exitorder/:orderId", async (req, res) => {
   try {
     const exitOrder = await OrdersModel.findByIdAndDelete(orderId);
     if (!exitOrder) {
-      return res.status(404).json({ message: "Order not found", success: false });
+      return res
+        .status(404)
+        .json({ message: "Order not found", success: false });
     }
-    console.log(exitOrder)
+    console.log(exitOrder);
     res
       .status(200)
       .json({ message: "Order exited successfully", success: true });
@@ -108,9 +112,11 @@ app.delete("/sellorder/:id", async (req, res) => {
   try {
     const sellOrder = await HoldingsModel.findByIdAndDelete(id);
     if (!sellOrder) {
-      return res.status(404).json({ message: "Order not found", success: false });
+      return res
+        .status(404)
+        .json({ message: "Order not found", success: false });
     }
-    console.log(sellOrder)
+    console.log(sellOrder);
     res
       .status(200)
       .json({ message: "Order exited successfully", success: true });
@@ -118,6 +124,5 @@ app.delete("/sellorder/:id", async (req, res) => {
     res.status(500).json({ message: "Failed to exit order", error });
   }
 });
-
 
 app.use("/", authRoute);

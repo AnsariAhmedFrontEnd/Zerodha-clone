@@ -11,22 +11,24 @@ import LoadingSpinner from "./LoadingSpinner"; // Spinner to show during loading
 const App = () => {
   return (
     <AuthProvider>
-      <AppContent /> {/* Move the main logic into this child component */}
+      <AppContent />
       <ToastContainer />
     </AuthProvider>
   );
 };
 
-// This component will have access to the context
+
 const AppContent = () => {
-  const { loading } = useAuth(); // Now useAuth() will work correctly here
+  const { loading } = useAuth();
 
   if (loading) {
-    return <LoadingSpinner />; // Show loading spinner while authentication is being checked
+    return <LoadingSpinner />;
   }
 
   return (
+    
     <Routes>
+      
       <Route path="/*" element={<LandingPage />} />
       <Route
         path="/dashboard/*"
